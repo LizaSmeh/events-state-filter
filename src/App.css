@@ -1,0 +1,11 @@
+.toolbarBtn {
+  cursor: pointer;
+  background-color: inherit;
+  padding: 0.5em 1.5em;
+  
+}
+
+.active {
+  background-color: #555555;
+  color: #fff;
+}
