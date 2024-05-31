@@ -1,7 +1,7 @@
 import { Toolbar } from './Toolbar.jsx'
-//import { ProjectList } from './ProjectList';
-//import { dataPortfolio } from './data/dataPortfolio';
+import { ProjectList } from './ProjectList';
 import { useState } from 'react';
+import { data } from '../data/dataPortfolio.js';
 
 export const Portfolio = () => {
   const filters=["All", "Websites", "Flayers", "Business Cards"];
@@ -9,7 +9,8 @@ export const Portfolio = () => {
   const onSelectFilter = (filter) => {
     setSelected(filter);
   };
-
+  const getProjects = selected === "All" ? data: data.filter(({category}) => category === selected);
+  
 
   return (
     <>
@@ -18,6 +19,8 @@ export const Portfolio = () => {
       selected = {selected}
       onSelectFilter={onSelectFilter}
       />
+      <ProjectList projects={getProjects}/>
+
   </>
   )
 }
