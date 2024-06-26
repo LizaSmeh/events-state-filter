@@ -2,9 +2,11 @@ import PropTypes from 'prop-types';
 
 export const ProjectList = ({ projects }) => {
   return (
-    <div>
-      {projects.map(({ img, category }) => {
-        <img src={img} alt={category} />
+    <div className='projectList'>
+      {projects.map(({ img, category }, index) => {
+       return (
+         <img key={index} src={img} alt={category} />
+       )
       })}
     </div>
     

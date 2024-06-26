@@ -14,6 +14,7 @@ export const Portfolio = () => {
 
   return (
     <>
+    <div className='portfolio'>
     <Toolbar  
       filters ={filters}
       selected = {selected}
@@ -21,6 +22,7 @@ export const Portfolio = () => {
       />
       <ProjectList projects={getProjects}/>
 
+  </div>
   </>
   )
 }

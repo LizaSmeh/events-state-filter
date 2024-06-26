@@ -1,11 +1,42 @@
-.toolbarBtn {
-  cursor: pointer;
-  background-color: inherit;
-  padding: 0.5em 1.5em;
-  
+body {
+  background-color: #fff;
+ }
+
+.portfolio {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto;
 }
+
+.toolbar {
+  display: flex;
+  margin-top: 30px;
+}
+
+.toolbarBtn {
+  border: 2px solid #555555 ;
+  border-radius: 0%;
+  background-color: #fff;
+  color: black;
+}
+
+.toolbarBtn:nth-child(n + 2) {
+  margin-left: 10px;
+}  
 
 .active {
   background-color: #555555;
   color: #fff;
+}
+
+.projectList {
+  column-count: 3;
+  margin-top: 20px;
+  
+}
+
+img {
+  width: 100%;
 }
